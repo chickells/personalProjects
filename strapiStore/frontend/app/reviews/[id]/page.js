@@ -16,13 +16,27 @@ export default async function CarPage() {
     
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error.... </p>;
-    
+
+    console.log(data.attributes);
+
     return(
-        <div>
-            <h1>Reviews { id }</h1>
-            <p>The V10 era of Formula One was an era of mechanical marvel. The symphony of high-revving engines echoing through the tracks was breathtaking. The raw power, precision engineering, and mind-boggling horsepower of these engines created an unforgettable racing experience. The relentless acceleration, ear-piercing sound, and lightning-fast gear changes left spectators and drivers in awe.
-            In this era, Formula One cars were poetry in motion. The aerodynamics and technical advancements pushed the boundaries. The V10 engines unleashed their fury, propelling these machines to blistering speeds. The noise and exhaust from these engines added to the excitement and made every race a spectacle. The pursuit of mechanical perfection reached its zenith, leaving a legendary legacy for the V10 era of Formula One.</p>
-            {/* <p>Data = {data.data.attributes.body}</p> */}
-            </div>
+        <div className="review-card">
+            <p>test</p>
+        </div>
     )
 }
+
+
+
+//
+// {/* <div className="rating">{data.data.attributes.rating}</div>
+//            <h2>{data.data.attributes.title}</h2>
+//
+//            <h1>Reviews { id }</h1>
+  //          <p>The V10 era of Formula One was an era of mechanical marvel. The symphony of high-revving engines echoing through the tracks was breathtaking. The raw power, precision engineering, and mind-boggling horsepower of these engines created an unforgettable racing experience. The relentless acceleration, ear-piercing sound, and lightning-fast gear changes left spectators and drivers in awe.
+    //        In this era, Formula One cars were poetry in motion. The aerodynamics and technical advancements pushed the boundaries. The V10 engines unleashed their fury, propelling these machines to blistering speeds. The noise and exhaust from these engines added to the excitement and made every race a spectacle. The pursuit of mechanical perfection reached its zenith, leaving a legendary legacy for the V10 era of Formula One.</p>
+      //      {/* <p>Data = {data.data.attributes.body}</p> */}
+
+        //    <small>id equals {data.data.id}</small>
+
+          //  <p>{data.data.attributes.body}</p> */}
