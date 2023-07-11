@@ -9,6 +9,7 @@
 
 import { useParams } from 'next/navigation';
 import useFetch from '../../hooks/useFetch'
+import Link from 'next/link'
 
 export default function CarPage() {
     const { id } = useParams()
@@ -26,6 +27,7 @@ export default function CarPage() {
             <small>id equals {data.data.id}</small>
 
             <p>{data.data.attributes.body}</p>
+            <small><Link href="/">(Go back home)</Link></small>
         </div>
     )
 }
