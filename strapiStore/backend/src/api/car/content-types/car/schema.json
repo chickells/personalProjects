@@ -4,7 +4,8 @@
   "info": {
     "singularName": "car",
     "pluralName": "cars",
-    "displayName": "car"
+    "displayName": "car",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -28,12 +29,12 @@
       "required": true
     },
     "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": true,
-      "required": true
+      ]
     },
     "statistics": {
       "displayName": "stats",
