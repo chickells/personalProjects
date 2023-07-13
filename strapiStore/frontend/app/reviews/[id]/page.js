@@ -27,8 +27,12 @@ export default function CarPage() {
         <div className='review-card'>
             <div className="rating">{data.data.attributes.rating}</div>
             <h2>{data.data.attributes.title}</h2>
-            <small>id equals {data.data.id}</small>
-            <Image src={`http://localhost:1337${photoURL}`} width={200} height={200} alt='asdf'/>
+            <Image 
+                src={`http://localhost:1337${photoURL}`} 
+                layout='responsive'
+                width={100} 
+                height={200} 
+                alt='asdf'/>
             <p>{data.data.attributes.body}</p>
             <small><Link href="/">(Go back home)</Link></small>
         </div>

@@ -19,8 +19,6 @@ export default function Home() {
           <div className="rating">{review.attributes.rating}</div>
           <h2>{review.attributes.title}</h2>
 
-          <small>id equals {review.id}</small>
-
           <p>{review.attributes.body.substring(0, 200)}...</p>
           <Link href={`/reviews/${review.id}`}>Read more...</Link>
         </div>

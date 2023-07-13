@@ -3,10 +3,11 @@
 body {
   margin: 0 30px;
   font-family: "Poppins";
-  background: #f1f1f1;
+  background: linear-gradient(to top, #272727, #222222); /* Updated background color */
 }
 h1,h2,h3,h4 {
   font-weight: 500;
+  color: rgb(255, 255, 255);
 }
 .App {
   font-size: 1.2em;
@@ -18,33 +19,38 @@ h1,h2,h3,h4 {
 }
 a {
   text-decoration: none;
-  color: #8e2ad6;
+  color: #679cff;
   border-bottom: 1px dotted;
 }
 .site-header h1 {
-  font-size: 1.5em;
-  color: #8e2ad6;
+  font-size: 2em;
+  color: #2a66d6;
   padding-bottom: 10px;
-  border-bottom: 2px solid;
+  border-bottom: 15px double;
 }
 
 /* review list */
 .review-card {
-  background: white;
+  background: linear-gradient(to top, #444444, #313131);
+  color: rgb(204, 204, 204);
   margin: 60px auto;
   padding: 1px 20px 20px 90px;
   position: relative;
+  border-radius: 40px; /* Added rounded edges */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2); /* Added drop shadow */
 }
+
 .review-card .rating {
   position: absolute;
   top: -20px;
   left: -20px;
-  background: #8e2ad6;
+  background: linear-gradient(to top, #2a66d6, #1c438b);
   font-size: 3em;
   width: 90px;
   height: 90px;
   text-align: center;
   color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 .review-card h2 {
   margin-bottom: 0;
