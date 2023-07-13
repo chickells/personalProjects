@@ -3,10 +3,10 @@ const nextConfig = {
     images: {
         remotePatterns: [
           {
-            protocol: 'https',
-            hostname: 'assets.example.com',
-            port: '',
-            pathname: '/account123/**',
+            protocol: 'http',
+            hostname: 'localhost',
+            port: '1337',
+            pathname: '/uploads/*', // only works with one '*', not two which was the default from https://nextjs.org/docs/messages/next-image-unconfigured-host
           },
         ],
       },
