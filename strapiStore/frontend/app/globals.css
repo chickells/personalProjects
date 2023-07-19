@@ -29,6 +29,14 @@ a {
   border-bottom: 15px double;
 }
 
+.site-header .categories {
+  text-align: right;
+}
+
+.site-header .categories a {
+  margin-left: 10px;
+}
+
 /* review list */
 .review-card {
   background: linear-gradient(to top, #444444, #313131);
