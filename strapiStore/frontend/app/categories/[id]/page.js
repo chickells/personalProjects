@@ -9,16 +9,21 @@ export default function CategoryPage() {
     const { id } = useParams()
     const { loading, error, data } = useFetch(`${hostURL}/api/categories/${id}?populate=*`)
   
-    console.log('category log');
-
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error...</p>
   
-  
     return (
       <div>
-        <span>category page</span>
-      </div>
+      {data.data.attributes.cars.data.map(review => (
+        <div key={review.id} className="review-card">
+          <div className="rating">{review.attributes.rating}</div>
+          <h2>{review.attributes.title}</h2>
+
+          <p>{review.attributes.body.substring(0, 200)}...</p>
+          <Link href={`/reviews/${review.id}`}>Read more...</Link>
+        </div>
+      ))}
+    </div>
     )
 }
 
