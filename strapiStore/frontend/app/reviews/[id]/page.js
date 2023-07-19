@@ -13,9 +13,9 @@ export default function CarPage() {
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error...</p>
   
-    console.log(data)
+    // console.log(data)
     const photoURL = data.data.attributes.photo.data.attributes.url // Extracting the photo URL
-    console.log(photoURL);
+    // console.log(photoURL);
 
 
 
