@@ -5,7 +5,7 @@ import React from 'react'
 import useFetch from '../hooks/useFetch'
 
 export default function Header() {
-  const { data, loading, error } = useFetch('http://localhost:1337/api/categories?populate=*');
+  const { data, loading, error } = useFetch(`http://localhost:1337/api/categories?populate=*`);
 
   if (loading) return <p>Loading categories...</p>
   if (error) return <p>Error categories...</p>

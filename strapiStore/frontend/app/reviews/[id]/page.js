@@ -27,12 +27,16 @@ export default function CarPage() {
         <div className='review-card'>
             <div className="rating">{data.data.attributes.rating}</div>
             <h2>{data.data.attributes.title}</h2>
+            {data.data.attributes.categories.data.map(category => (
+                <small key={category.id}>{category.attributes.name}</small>
+            ))}
             <Image 
                 src={`http://localhost:1337${photoURL}`} 
                 layout='responsive'
                 width={100} 
                 height={200} 
-                alt='asdf'/>
+                alt='holy shit its a car'
+                style={{ marginTop: '10px' }}/>
             <p>{data.data.attributes.body}</p>
             <small><Link href="/">(Go back home)</Link></small>
         </div>
