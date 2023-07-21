@@ -31,7 +31,7 @@ export default function Home() {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.remove('invisible');
-        observer.unobserve(entry.target); // Stop observing the card after it becomes visible
+        observer.unobserve(entry.target);
       }
     });
   };
@@ -43,14 +43,17 @@ export default function Home() {
       threshold: 0.5,
     };
 
+    const observer = new IntersectionObserver((entries) =>
+      handleIntersection(entries, observer)
+    );
+
     reviewCardsRef.current.forEach((cardRef) => {
-      const observer = new IntersectionObserver(handleIntersection, options);
-      cardRef.classList.add('invisible');
       observer.observe(cardRef);
-      return () => {
-        observer.disconnect();
-      };
     });
+
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
   if (loading) return <p>Loading...</p>;
