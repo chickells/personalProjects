@@ -9,6 +9,7 @@ h1,h2,h3,h4 {
   font-weight: 500;
   color: rgb(255, 255, 255);
 }
+
 .App {
   font-size: 1.2em;
   margin: 10px auto;
@@ -49,6 +50,24 @@ a {
   position: relative;
   border-radius: 20px; /* Added rounded edges */
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2); /* Added drop shadow */
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInAnimation 0.5s ease-out forwards;
+}
+
+@keyframes slideInAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.invisible {
+  opacity: 0;
 }
 
 .review-card .rating {
